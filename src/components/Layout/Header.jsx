@@ -30,7 +30,7 @@ const Header = (props) => {
 
   return (
     <Fragment>
-      <header className={`w-full lg:h-20 border-b-2 border-gray-200 flex items-center px-10 lg:px-20 bg-white justify-between  ${scrolled ? 'fixed top-0 z-10' : ''}`}>
+      <header className={`w-full bg-white lg:h-20 border-b-2 border-gray-200 flex items-center px-10 lg:px-20 justify-between  ${scrolled ? 'fixed top-0 z-10' : ''}`}>
         <div>
           <img className='w-44 lg:w-48' src="assets/HeaderImage/Studio Shodwe.png" alt="Studio Shodwe" />
         </div>

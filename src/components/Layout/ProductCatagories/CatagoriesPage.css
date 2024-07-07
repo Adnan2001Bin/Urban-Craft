@@ -1,4 +1,4 @@
-.BedHeadingImg {
+/* .BedHeadingImg {
     width: 57%;
     height: 45vh;
 }
@@ -8,24 +8,24 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-}
+} */
 
 
 
 .imgLink {
-    padding: .8rem;
-    width:80%;
+    /* padding: .8rem;
+    width:90%;
     height: 50vh;
     margin: 1rem ;
     border-radius: .5rem;
 
-    overflow: hidden;
+    overflow: hidden; */
 
 }
 
-.imgLink:hover {
+/* .imgLink:hover {
     border: 2px solid #B4B4B8;
-}
+} */
 
 .imgItem {
     width:100%;
@@ -37,15 +37,15 @@
 
 }
 
-.imgBox {
-    width:100%;
-    height: 80%;
-    overflow: hidden;
-    position: relative;
-    display: inline-block;
-    border-radius: .5rem;
+/* .imgBox { */
+    /* width:100%;
+    height: 80%; */
+    /* overflow: hidden; */
+    /* position: relative; */
+    /* display: inline-block; */
+    /* border-radius: .5rem; */
 
-}
+/* } */
 
 .imgBox:hover .imgItem {
     transform: scale(1.2);
