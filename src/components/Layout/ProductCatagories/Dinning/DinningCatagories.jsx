@@ -1,5 +1,6 @@
 import React from 'react'
 import './DinningCatagories.css'
+import { Link } from 'react-router-dom'
 // import { Link } from 'react-router-dom'
 
 const DinningCatagories = () => {
@@ -9,14 +10,14 @@ const DinningCatagories = () => {
                 <img className='w-full h-3/5 rounded-lg' src="assets\Dinning\pexels-zhengdong-hu-297240489-13490214.jpg" alt="" />
                 <h1 className='font-bold text-xl text-black text-center mt-2'>DINNING INTERIOR IDEAS</h1>
                 <p className='text-xs text-center mt-1'>Enhance your dining experience with our curated collection of interior ideas. Discover elegant designs, cozy atmospheres, and functional layouts for your dining space.</p>
-                <div to={'./DinningRoomCatagoriesPage'}>
+                <Link to={'./DinningRoomCatagoriesPage'}>
                     <button className='bg-black w-24 mt-2 ml-20 hover:bg-gray-700 rounded-3xl h-7 text-white text-sm '>Show All</button>
-                </div>
+                </Link>
 
             </div>
             <div className='grid grid-cols-2 gap-2 w-full h-80 items-start mt-7'>
                 <div className=' h-full dinningItems cursor-pointer'>
-                    <img className='w-24 h-24 mb-2' src="assets\Dinning\h8a2_mo9e_210924.jpg" alt="" />
+                    <img className='w-24 h-24 mb-2' src="public\assets\Dinning\8100jx6ZW9L._SX679_.jpg" alt="" />
                     <h1 className='text-xl font-bold'>Dinning</h1>
                     <div className='ml-7'>
                         <ul className='text-sm font-medium list-disc'>
@@ -42,3 +43,6 @@ const DinningCatagories = () => {
 }
 
 export default DinningCatagories
+
+
+
