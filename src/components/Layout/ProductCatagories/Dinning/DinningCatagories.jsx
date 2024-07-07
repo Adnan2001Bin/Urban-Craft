@@ -4,7 +4,7 @@ import './DinningCatagories.css'
 
 const DinningCatagories = () => {
     return (
-        <div className='dinningCatagories flex items-center shadow-xl mt-7 '>
+        <div className='dinningCatagories bg-white flex items-center shadow-xl mt-7 '>
             <div className='bg-orange-50 w-3/5 h-full rounded-xl flex-col items-start justify-start'>
                 <img className='w-full h-3/5 rounded-lg' src="assets\Dinning\pexels-zhengdong-hu-297240489-13490214.jpg" alt="" />
                 <h1 className='font-bold text-xl text-black text-center mt-2'>DINNING INTERIOR IDEAS</h1>

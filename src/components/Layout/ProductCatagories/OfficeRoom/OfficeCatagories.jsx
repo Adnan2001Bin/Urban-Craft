@@ -4,7 +4,7 @@ import './OfficeCatagories.css'
 
 const OfficeCatagories = () => {
     return (
-        <div className='OfficeCatagories flex items-center shadow-xl mt-7 h-96'>
+        <div className='OfficeCatagories bg-white flex items-center shadow-xl mt-7 h-96'>
             <div className='bg-orange-50 w-3/5 h-full rounded-xl flex-col items-start justify-start'>
                 <img className='w-full h-3/5 rounded-lg' src="assets\Office\pexels-achraf-borkadi-440724799-19893586.jpg" alt="" />
                 <h1 className='font-bold text-lg text-black text-center mt-2'>Office ROOM INTERIOR IDEAS</h1>

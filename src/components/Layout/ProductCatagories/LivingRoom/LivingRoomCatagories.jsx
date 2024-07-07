@@ -4,7 +4,7 @@ import './LivingRoomCatagories.css'
 
 const LivingRoomCatagories = () => {
   return (
-    <div className='LivingRoomCatagories flex items-center shadow-xl mt-7 h-96'>
+    <div className='LivingRoomCatagories bg-white flex items-center shadow-xl mt-7 h-96'>
       <div className='bg-orange-50 w-3/5 h-full rounded-xl flex-col items-start justify-start'>
         <img className='w-full h-3/5 rounded-lg' src="assets\Livingroom\pexels-jvdm-1457842.jpg" alt="" />
         <h1 className='font-bold text-lg text-black text-center mt-2'>LIVING ROOM INTERIOR IDEAS</h1>

@@ -1,30 +1,27 @@
-import { Fragment, useState } from 'react'
-import Header from './components/Layout/Header'
-import ResponsiveNavbar from './components/Layout/ResponsiveNavbar';
+import React, { Fragment } from 'react'
+import { RouterProvider, createBrowserRouter } from 'react-router-dom'
+import RootLayout from './components/Route/Root'
+import All from './All'
+import BedRoomCatagoriesPage from './components/Layout/ProductCatagories/Beedroom/BedRoomCatagoriesPage'
 
-
-
-function App() {
-  const [navShown, setnavShown] = useState(false);
-
-
-  const showNavHandler = () => {
-    setnavShown(true);
-  };
-
-  const hideNavHandler = () => {
-    setnavShown(false);
-  };
-
+const App = () => {
+  const router = createBrowserRouter([
+    {
+      path: '/',
+      element: <RootLayout />,
+      children: [
+        {
+          index: true , element: <All />
+        },
+        {
+          path:'/BedRoomCatagoriesPage' ,element:<BedRoomCatagoriesPage />
+        }
+      ]
+    }
+  ])
   return (
     <Fragment>
-      <Header
-        onShowNav={showNavHandler}
-      />
-
-      {navShown && <ResponsiveNavbar
-        onClose={hideNavHandler}
-      />}
+      <RouterProvider router={router}/>
     </Fragment>
   )
 }

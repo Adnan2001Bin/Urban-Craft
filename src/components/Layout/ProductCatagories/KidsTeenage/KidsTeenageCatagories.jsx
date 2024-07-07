@@ -4,7 +4,7 @@ import './KidsTeenageCatagories.css'
 
 const KidsTeenageCatagories = () => {
   return (
-    <div className='KidsTeenageCatagories flex items-center shadow-xl mt-7 h-96'>
+    <div className='KidsTeenageCatagories bg-white flex items-center shadow-xl mt-7 h-96'>
       <div className='bg-orange-50 w-3/5 h-full rounded-xl flex-col items-start justify-start'>
         <img className='w-full h-3/5 rounded-lg' src="assets\KidsTeenage\becca-casey-darien-ct-lo-15-64c018f8dce2b.jpeg" alt="" />
         <h1 className='font-bold text-lg text-black text-center mt-1'>KID'S ROOM INTERIOR</h1>

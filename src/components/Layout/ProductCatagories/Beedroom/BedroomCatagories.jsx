@@ -1,18 +1,18 @@
 import React from 'react'
 import './BedroomCatagories.css'
-// import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 const BedroomCatagories = () => {
   return (
-    <div className='bedCatagories flex items-center shadow-xl mt-7'>
+    <div className='bedCatagories flex items-center shadow-xl mt-7 bg-white'>
       <div className='bg-orange-50 w-3/5 h-full rounded-xl flex-col items-start'>
         <img className='w-full h-3/5 rounded-lg' src="assets\Bedroom\pexels-pixabay-210604.jpg" alt="" />
         <h1 className='font-bold text-lg text-black text-center mt-1'>BEDROOM INTERIOR IDEAS</h1>
         <p className='text-xs text-center mt-1'>Discover inspiring bedroom interior ideas to transform your space into a cozy retreat. From minimalist designs to bold color schemes, find your perfect style.</p>
         {/* to={'/BedRoomCatagoriesPage'} */}
-        <div >
+        <Link to={'/BedRoomCatagoriesPage'}>
           <button className='bg-black w-24 mt-2 ml-20 hover:bg-gray-700 rounded-3xl h-7 text-white text-sm '>Show All</button>
-        </div>
+        </Link>
 
 
       </div>
