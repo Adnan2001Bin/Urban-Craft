@@ -4,6 +4,8 @@ import RootLayout from './components/Route/Root'
 import All from './All'
 import BedRoomCatagoriesPage from './components/Layout/ProductCatagories/Beedroom/BedRoomCatagoriesPage'
 import DinningRoomCatagoriesPage from './components/Layout/ProductCatagories/Dinning/DinningRoomCatagoriesPage'
+import LivingRoomCatagories from './components/Layout/ProductCatagories/LivingRoom/LivingRoomCatagories'
+import LivingRoomCatagoriesPage from './components/Layout/ProductCatagories/LivingRoom/LivingRoomCatagoriesPage'
 const App = () => {
   const router = createBrowserRouter([
     {
@@ -18,6 +20,9 @@ const App = () => {
         },
         {
           path:'/DinningRoomCatagoriesPage' , element: <DinningRoomCatagoriesPage />
+        },
+        {
+          path: '/LivingRoomCatagoriesPage' , element:<LivingRoomCatagoriesPage />
         }
       ]
     }

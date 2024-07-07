@@ -9,8 +9,8 @@ const Backdrop = props => {
 }
 
 const ModalOverlay = props => {
-  return <div className='flex justify-start'>
-    <div className="ModalNav fixed flex pl-4 z-30 w-full bg-white">
+  return <div className='flex justify-start '>
+    <div className="ModalNav overflow-scroll fixed flex pl-4 z-30 w-full bg-white">
       <div className='w-full'>
         {props.children}
       </div>

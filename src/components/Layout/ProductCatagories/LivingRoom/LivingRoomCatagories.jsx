@@ -1,6 +1,7 @@
 import React from 'react'
 import './LivingRoomCatagories.css'
-// import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
+
 
 const LivingRoomCatagories = () => {
   return (
@@ -9,9 +10,9 @@ const LivingRoomCatagories = () => {
         <img className='w-full h-3/5 rounded-lg' src="assets\Livingroom\pexels-jvdm-1457842.jpg" alt="" />
         <h1 className='font-bold text-lg text-black text-center mt-2'>LIVING ROOM INTERIOR IDEAS</h1>
         <p className='text-xs text-center mt-1'>Transform your living room with our curated collection of interior ideas. Discover elegant designs and functional layouts for every style.</p>
-        <div to={'./LivingRoomCatagoriesPage'}>
+        <Link to={'./LivingRoomCatagoriesPage'}>
           <button className='bg-black w-24 mt-2 ml-20 hover:bg-gray-700 rounded-3xl h-7 text-white text-sm '>Show All</button>
-        </div>
+        </Link>
 
 
       </div>
