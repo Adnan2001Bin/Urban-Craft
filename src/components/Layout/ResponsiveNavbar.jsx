@@ -3,11 +3,12 @@ import ModalNav from './ModalNav';
 import { Link } from 'react-router-dom';
 
 const ResponsiveNavbar = (props) => {
-  const [visibleSection, setVisibleSection] = useState(null); 
+  const [visibleSection, setVisibleSection] = useState(null);
   const bedroomRef = useRef(null);
   const dinningRef = useRef(null);
   const LivingRoomRef = useRef(null)
   const OfficeRef = useRef(null)
+  const DoorRef = useRef(null)
 
 
   const handleBedroomToggle = () => {
@@ -26,6 +27,10 @@ const ResponsiveNavbar = (props) => {
     setVisibleSection(visibleSection === 'Office' ? null : 'Office')
   }
 
+  const handleDoorToggle = () => {
+    setVisibleSection(visibleSection === 'Door' ? null : 'Door')
+  }
+
 
 
   return (
@@ -33,10 +38,10 @@ const ResponsiveNavbar = (props) => {
       {/* to={'/'} */}
       <div className=''>
         <div className=''>
-          <div className='flex justify-between items-center '>
+          <Link onClick={props.onClose} to={'/'} className='flex justify-between items-center '>
             <img className='w-48' src="assets/HeaderImage/Studio Shodwe.png" alt="" />
             <img onClick={props.onClose} className='w-6 h-6 mr-5' src="public/assets/HeaderImage/x-button.png" alt="" />
-          </div>
+          </Link>
 
           <div className='ml-4 mt-5 text-3xl'>
             <div className='bed' onClick={handleBedroomToggle}>
@@ -51,7 +56,7 @@ const ResponsiveNavbar = (props) => {
                     <h1 className='font-bold text-lg text-black text-center mt-1'>BEDROOM INTERIOR IDEAS</h1>
                     <p className='text-xs text-center mt-1'>Discover inspiring bedroom interior ideas to transform your space into a cozy retreat. From minimalist designs to bold color schemes, find your perfect style.</p>
                     <Link to={'/BedRoomCatagoriesPage'} onClick={props.onClose}>
-                      <button className='bg-black w-24 mt-2 sm:ml-20 ml-32 hover:bg-gray-700 rounded-3xl h-7 text-white text-sm'>Show All</button>
+                      <button className='bg-black w-24 mt-2 sm:ml-20 ml-28 hover:bg-gray-700 rounded-3xl h-7 text-white text-sm'>Show All</button>
                     </Link>
                   </div>
                   <div className='grid grid-cols-2 gap-2 w-full h-full items-center sm:mt-0 mt-3'>
@@ -90,13 +95,13 @@ const ResponsiveNavbar = (props) => {
                     <img className='w-full h-3/5 rounded-lg' src="assets/Dinning/pexels-zhengdong-hu-297240489-13490214.jpg" alt="" />
                     <h1 className='font-bold text-xl text-black text-center mt-2'>DINNING INTERIOR IDEAS</h1>
                     <p className='text-xs text-center mt-1'>Enhance your dining experience with our curated collection of interior ideas. Discover elegant designs, cozy atmospheres, and functional layouts for your dining space.</p>
-                    <div to={'./DinningRoomCatagoriesPage'}>
-                      <button className='bg-black w-24 mt-2 sm:ml-20 ml-32 hover:bg-gray-700 rounded-3xl h-7 text-white text-sm'>Show All</button>
-                    </div>
+                    <Link to={'/DinningRoomCatagoriesPage'} onClick={props.onClose}>
+                      <button className='bg-black w-24 mt-2 sm:ml-20 ml-28 hover:bg-gray-700 rounded-3xl h-7 text-white text-sm'>Show All</button>
+                    </Link>
                   </div>
                   <div className='grid grid-cols-2 gap-2 w-full h-full items-start mt-7'>
                     <div className='shadow-xl h-full dinningItems cursor-pointer'>
-                      <img className='w-24 h-24 mb-2' src="assets/Dinning/h8a2_mo9e_210924.jpg" alt="" />
+                      <img className='w-24 h-24 mb-2' src="public\assets\Dinning\Artemis-113 and Mandolin-103 (4 Chair and 1 Table Top + Leg).jpg" alt="" />
                       <h1 className='text-xl font-bold'>Dinning</h1>
                       <div className='ml-7'>
                         <ul className='text-sm font-medium list-disc'>
@@ -136,10 +141,10 @@ const ResponsiveNavbar = (props) => {
                     <img className='w-full h-3/5 rounded-lg' src="assets\Livingroom\pexels-jvdm-1457842.jpg" alt="" />
                     <h1 className='font-bold text-lg text-black text-center mt-2'>LIVING ROOM INTERIOR IDEAS</h1>
                     <p className='text-xs text-center mt-1'>Transform your living room with our curated collection of interior ideas. Discover elegant designs and functional layouts for every style.</p>
-                    {/* to={'./LivingRoomCatagoriesPage'} */}
-                    <div >
-                      <button className='bg-black w-24 mt-2 sm:ml-20 ml-32 hover:bg-gray-700 rounded-3xl h-7 text-white text-sm '>Show All</button>
-                    </div>
+
+                    <Link to={'/LivingRoomCatagoriesPage'} onClick={props.onClose}>
+                      <button className='bg-black w-24 mt-2 sm:ml-20 ml-28 hover:bg-gray-700 rounded-3xl h-7 text-white text-sm '>Show All</button>
+                    </Link>
 
 
                   </div>
@@ -187,10 +192,9 @@ const ResponsiveNavbar = (props) => {
                     <img className='w-full h-3/5 rounded-lg' src="assets\Office\pexels-achraf-borkadi-440724799-19893586.jpg" alt="" />
                     <h1 className='font-bold text-lg text-black text-center mt-2'>Office ROOM INTERIOR IDEAS</h1>
                     <p className='text-xs text-center mt-1'>Explore a range of office room interior ideas to elevate your workspace. From minimalist designs to cozy setups, find inspiration for your ideal office ambiance.</p>
-                    {/* to={'./OfficeCatagoriesPage'} */}
-                    <div >
-                      <button className='bg-black w-24 mt-2 sm:ml-20 ml-32 hover:bg-gray-700 rounded-3xl h-7 text-white text-sm'>Show All</button>
-                    </div>
+                    <Link to={'/OfficeCatagoriesPage'} onClick={props.onClose}>
+                      <button className='bg-black w-24 mt-2 sm:ml-20 ml-28 hover:bg-gray-700 rounded-3xl h-7 text-white text-sm'>Show All</button>
+                    </Link>
 
 
 
@@ -226,14 +230,39 @@ const ResponsiveNavbar = (props) => {
             </div>
 
 
-            <div>
+            <div onClick={handleDoorToggle}>
               <div className='flex justify-between items-center font-medium m-3 hover:bg-gray-100'>
-                <p>Chair</p>
+                <p>Door</p>
+                <img className='w-5 h-5' src="assets/HeaderImage/down-chevron.png" alt="" />
 
+              </div>
+
+              <div ref={DoorRef} className={visibleSection === 'Door' ? '' : 'hidden'}>
+                <div className='sm:flex sm:flex-row flex flex-col shadow-xl ml-3 mt-5 mb-5 mr-5 '>
+                  <div className='bg-orange-50 sm:w-3/5 w-11/12 h-full rounded-xl flex-col items-start'>
+                    <img className='w-full h-3/5 rounded-lg' src="public\assets\Door\pexels-zvolskiy-1544420.jpg" alt="" />
+                    <h1 className='font-bold text-xl text-black text-center mt-2'>Doors</h1>
+                    <p className='text-xs text-center mt-1'>Discover elegant doors that blend style and functionality, perfect for every room in your home.</p>
+                    <Link to={'/DoorCatagoriesPage'}>
+                      <button className='bg-black w-24 mt-2 sm:ml-20 ml-28 hover:bg-gray-700 rounded-3xl h-7 text-white text-sm'>Show All</button>
+                    </Link>
+
+                  </div>
+                  <div className='grid grid-cols-2 gap-2 w-full h-full items-center '>
+                    <div className='shadow-md h-full doorItems cursor-pointer'>
+                      <img className='w-48 h-52 mb-3' src="public\assets\Door\02-Solid-Wooden-Door.png" alt="" />
+                      <h1 className='text-xl font-bold w-40 text-center '>Solid-Wooden-Door</h1>
+                    </div>
+                    <div className='doorItems h-full  cursor-pointer'>
+                      <img className='w-48 h-52 mb-3 rounded-sm' src="public\assets\Door\03-Solid-Engineered-Wooden-Door.png" alt="" />
+                      <h1 className='text-xl font-bold w-40 text-center '>Solid-Engineered-Wooden-Door</h1>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
 
-          
+
 
           </div>
 

@@ -5,7 +5,7 @@ import HeaderCartButton from './HeaderCartButton';
 import DinningCatagories from './ProductCatagories/Dinning/DinningCatagories';
 import LivingRoomCatagories from './ProductCatagories/LivingRoom/LivingRoomCatagories';
 import OfficeCatagories from './ProductCatagories/OfficeRoom/OfficeCatagories';
-
+import DoorCatagories from './ProductCatagories/Door/DoorCatagories'
 
 
 const Header = (props) => {
@@ -79,11 +79,11 @@ const Header = (props) => {
 
           <div className='relative group ml-5 '>
             <div className='flex items-center justify-between gap-2'>
-              <button className='hover:font-semibold hover:underline flex items-center '>Bedroom</button>
+              <button className='hover:font-semibold hover:underline flex items-center '>Door</button>
               <img className='dropdown w-2 h-2 transform transition-transform duration-300 group-hover:rotate-180' src="public/assets/HeaderImage/arrow-down.png" alt="" />
             </div>
             <div className='absolute z-[999] hidden group-hover:block'>
-              <BedroomCatagories />
+              <DoorCatagories />
             </div>
           </div>
         </div>
