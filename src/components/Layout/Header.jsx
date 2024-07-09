@@ -6,6 +6,7 @@ import DinningCatagories from './ProductCatagories/Dinning/DinningCatagories';
 import LivingRoomCatagories from './ProductCatagories/LivingRoom/LivingRoomCatagories';
 import OfficeCatagories from './ProductCatagories/OfficeRoom/OfficeCatagories';
 import DoorCatagories from './ProductCatagories/Door/DoorCatagories'
+import { Link } from 'react-router-dom';
 
 
 const Header = (props) => {
@@ -30,9 +31,9 @@ const Header = (props) => {
   return (
     <Fragment>
       <header className={`w-full bg-white lg:h-20 border-b-2 border-gray-200 flex items-center px-10 lg:px-20 justify-between  ${scrolled ? 'fixed top-0 z-10' : ''}`}>
-        <div>
+        <Link to={'/'}>
           <img className='w-44 lg:w-48' src="assets/HeaderImage/Studio Shodwe.png" alt="Studio Shodwe" />
-        </div>
+        </Link>
 
         <div className='lg:flex lg:justify-center lg:items-center  lg:w-7/12 lg:h-9 lg:gap-3 font-MyFont font-medium text-base hover:bg-blue-50 hover:rounded-lg  hidden'>
           <div className='relative group ml-5 '>
