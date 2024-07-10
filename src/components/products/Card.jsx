@@ -1,9 +1,21 @@
 import React, { useContext } from "react";
 import "./Card.css";
 import Form from "./others/Form";
+import CartContext from "../../Store/cart-context";
 
 const Card = (props) => {
+  const cartCtx = useContext(CartContext)
   const price = `Starts From ${props.price} BDT`;
+
+  const addToCartHandler = amount => {
+    cartCtx.addItem({
+      id: props.id,
+      name: props.name,
+      img: props.img,
+      amount: amount,
+      price: props.price
+    })
+  }
 
   return (
     // <div className=' productsimgLink shadow-lg'>
@@ -39,7 +51,7 @@ const Card = (props) => {
         </h1>
         <p className="text-center  mt-1 font-mono font-bold">{price}</p>
       </div>
-      <Form />
+      <Form onAddToCart = {addToCartHandler}/>
     </div>
   );
 };

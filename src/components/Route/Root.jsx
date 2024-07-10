@@ -1,27 +1,23 @@
-import { Outlet } from 'react-router-dom'
+import { Outlet } from "react-router-dom";
 
-import Home from '../../Home'
-import { Fragment } from 'react'
-// import CartProvider from '../../Store/CartProvider'
-
-
-
+import Home from "../../Home";
+import { Fragment } from "react";
+import CartProvider from "../../Store/CartProvider";
 
 function RootLayout() {
   return (
-    // <CartProvider>
-    <Fragment>
-      <Home />
-      
-      <div>
-        <Outlet />
-      </div>
-      
+    <CartProvider>
+      <Fragment>
+        <Home />
 
-      {/* <Footer /> */}
+        <div>
+          <Outlet />
+        </div>
+
+        {/* <Footer /> */}
       </Fragment>
-    // </CartProvider>
-  )
+    </CartProvider>
+  );
 }
 
-export default RootLayout
+export default RootLayout;

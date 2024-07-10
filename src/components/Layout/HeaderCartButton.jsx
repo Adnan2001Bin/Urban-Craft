@@ -27,14 +27,14 @@
 import React from 'react'
 
 import { useContext } from 'react'
-// import CartContext from '../../Store/cart-context'
+import CartContext from '../../Store/cart-context'
 
 const HeaderCartButton = (props) => {
-  // const cartCtx = useContext(CartContext)
+  const cartCtx = useContext(CartContext)
 
-  // const numberOfCartItems = cartCtx.items.reduce((curNumber, item) => {
-  //   return curNumber + item.amount
-  // }, 0)
+  const numberOfCartItems = cartCtx.items.reduce((curNumber, item) => {
+    return curNumber + item.amount
+  }, 0)
 
 
 
@@ -43,7 +43,7 @@ const HeaderCartButton = (props) => {
 
       <img className='w-10 h-10' src="assets\HeaderImage\icons8-cart-100.png" alt="" />
       <div className=' cartNumber flex justify-center items-center bg-black text-white w-6 h-6 rounded-full'>
-        5
+        {numberOfCartItems}
       </div>
     </button>
   )
