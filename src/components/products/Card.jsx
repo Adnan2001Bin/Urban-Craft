@@ -2,10 +2,14 @@ import React, { useContext } from "react";
 import "./Card.css";
 import Form from "./others/Form";
 import CartContext from "../../Store/cart-context";
+import { Cookies } from "react-cookie";
 
 const Card = (props) => {
   const cartCtx = useContext(CartContext)
   const price = `Starts From ${props.price} BDT`;
+  const cookies = new Cookies();
+
+  cookies.set('cartItems', JSON.stringify(cartCtx.items), { path: '/' });
 
   const addToCartHandler = amount => {
     cartCtx.addItem({

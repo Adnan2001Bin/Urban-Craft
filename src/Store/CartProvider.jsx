@@ -102,10 +102,19 @@
 
 import React, { useReducer } from "react";
 import CartContext from "./cart-context";
+import { Cookies } from "react-cookie";
+
+const cookies = new Cookies();
+
+const cookieCartItems = cookies.get("cartItems");
+let totalAmountfromCookies = 0;
+cookieCartItems?.map((item) => {
+  totalAmountfromCookies += item.price;
+});
 
 const defaultCartState = {
-  items: [],
-  totalAmount: 0,
+  items: cookieCartItems ?? [],
+  totalAmount: totalAmountfromCookies ?? 0,
 };
 
 const cartReducer = (state, action) => {
