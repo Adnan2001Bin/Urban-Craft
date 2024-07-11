@@ -12,7 +12,7 @@
   }
   
   .totalAmount {
-    margin-top: -5rem;
+    /* margin-top: -5rem; */
     height: 9vh;
     box-shadow: 4px -2px 10px gray;
   }
@@ -23,7 +23,7 @@
   .cart-items {
   
     overflow-y: auto;
-    height: 85vh;
+    height: 82vh;
   }
   
   

@@ -10,6 +10,10 @@ function Cart(props) {
   const totalAmount = `৳${cartCtx.totalAmount}`;
   const hasItems = cartCtx.items.length > 0;
 
+  const cartAllItemRemoveHandler = (id) => {
+    cartCtx.removeAllItem(id);
+  };
+
   const cartItemRemoveHandler = (id) => {
     cartCtx.removeItem(id);
   };
@@ -32,6 +36,7 @@ function Cart(props) {
           img={item.img}
           amount={item.amount}
           price={item.price}
+          onAllRemove = {cartAllItemRemoveHandler.bind(null,item.id)}
           onRemove={cartItemRemoveHandler.bind(null, item.id)}
           onAdd={cartItemAddHandler.bind(null, item)}
         />
@@ -46,7 +51,28 @@ function Cart(props) {
           <h1>Your Cart</h1>
         </div>
 
-        {hasItems && <div>{cartItems}</div>}
+        {/* {hasItems && <div>{cartItems}</div>
+        
+        } */}
+
+        {hasItems && (
+          <div >
+            <div>{cartItems}</div>
+            <div className=" w-full bg-gray-100">
+              <div className="flex items-center justify-between">
+                <p>Total Amount:</p>
+                <p className="text-2xl font-semibold pl-4">{totalAmount}</p>
+              </div>
+
+              <button
+                onClick={handleClick}
+                className={`w-44 text-white bg-black border border-black hover:bg-gray-600 rounded-xl h-10 text-center ml-28`}
+              >
+                Confirm Order
+              </button>
+            </div>
+          </div>
+        )}
 
         {!hasItems && (
           <div className="emptyCart">
@@ -65,18 +91,9 @@ function Cart(props) {
         )}
       </div>
 
-      {hasItems && (
-        <div className="totalAmount flex items-center justify-between w-full bg-gray-100">
-          <p className="text-2xl font-semibold pl-4">{totalAmount}</p>
-
-          <button
-            onClick={handleClick}
-            className={`w-44 text-white bg-black border border-black hover:bg-gray-600 rounded-xl h-14 text-center `}
-          >
-            Confirm Order
-          </button>
-        </div>
-      )}
+      {/* {hasItems && (
+        
+      )} */}
     </ModalCart>
   );
 }
