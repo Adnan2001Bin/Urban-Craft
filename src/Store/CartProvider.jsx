@@ -17,33 +17,38 @@ const defaultCartState = {
 };
 
 const cartReducer = (state, action) => {
-  if (action.type === "ADD") {
+  if (action.type === 'ADD') {
+
+
     const updatedTotalAmount =
       state.totalAmount + action.item.price * action.item.amount;
 
+
     const exitingCartItemIndex = state.items.findIndex(
       (item) => item.id === action.item.id
-    );
+    )
 
-    const existingCartItem = state.items[exitingCartItemIndex];
+    const existingCartItem = state.items[exitingCartItemIndex]
     let updatedItems;
 
     if (existingCartItem) {
       const updatedItem = {
         ...existingCartItem,
-        amount: existingCartItem.amount + action.item.amount,
-      };
+        amount: existingCartItem.amount + action.item.amount
+      }
 
       updatedItems = [...state.items];
-      updatedItems[exitingCartItemIndex] = updatedItem;
+      updatedItems[exitingCartItemIndex] = updatedItem
     } else {
       updatedItems = state.items.concat(action.item);
     }
 
     return {
       items: updatedItems,
-      totalAmount: updatedTotalAmount,
-    };
+      totalAmount: updatedTotalAmount
+
+      
+    }
   }
 
   if (action.type === "REMOVE") {

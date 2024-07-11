@@ -36,7 +36,7 @@ function Cart(props) {
           img={item.img}
           amount={item.amount}
           price={item.price}
-          onAllRemove = {cartAllItemRemoveHandler.bind(null,item.id)}
+          onAllRemove={cartAllItemRemoveHandler.bind(null, item.id)}
           onRemove={cartItemRemoveHandler.bind(null, item.id)}
           onAdd={cartItemAddHandler.bind(null, item)}
         />
@@ -56,20 +56,29 @@ function Cart(props) {
         } */}
 
         {hasItems && (
-          <div >
+          <div>
             <div>{cartItems}</div>
-            <div className=" w-full bg-gray-100">
-              <div className="flex items-center justify-between">
+            <div className=" w-full bg-gray-100 font-MyFont1">
+              <div className="flex items-center justify-between font-semibold text-xl mb-2 ">
                 <p>Total Amount:</p>
-                <p className="text-2xl font-semibold pl-4">{totalAmount}</p>
+                <p className="  pl-4">{totalAmount}</p>
               </div>
 
-              <button
-                onClick={handleClick}
-                className={`w-44 text-white bg-black border border-black hover:bg-gray-600 rounded-xl h-10 text-center ml-28`}
-              >
-                Confirm Order
-              </button>
+              <div className="flex justify-between">
+                <button
+                  onClick={handleClick}
+                  className={`w-48 text-white bg-gray-800 border border-black hover:bg-gray-600  h-10 text-center`}
+                >
+                  VIEW CART
+                </button>
+
+                <button
+                  onClick={handleClick}
+                  className={`w-48 text-white bg-black border border-black hover:bg-gray-600 h-10 text-center`}
+                >
+                  CHECKOUT
+                </button>
+              </div>
             </div>
           </div>
         )}
@@ -97,5 +106,7 @@ function Cart(props) {
     </ModalCart>
   );
 }
+
+
 
 export default Cart;
