@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import CartContext from "../../Store/cart-context";
 import { useContext } from "react";
 import Cart_Card from "./Cart-Card";
+import ViewCart from "./ViewCart";
 
 function Cart(props) {
   const cartCtx = useContext(CartContext);
@@ -65,12 +66,14 @@ function Cart(props) {
               </div>
 
               <div className="flex justify-between">
+              <Link onClick={props.onClose} to={'/ViewCart'}>
                 <button
                   onClick={handleClick}
                   className={`w-48 text-white bg-gray-800 border border-black hover:bg-gray-600  h-10 text-center`}
                 >
                   VIEW CART
                 </button>
+                </Link>
 
                 <button
                   onClick={handleClick}

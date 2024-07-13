@@ -2,13 +2,13 @@ import React, { useEffect, useState } from 'react'
 import Card from '../Card'
 import ProductCardLayout from '../ProductCardLayout'
 
-const ReadingTable = () => {
-  const [readingTable, setReadingTables] = useState([])
+const BedSideTable = () => {
+  const [bedSideTables, setBedSideTables] = useState([])
 
   useEffect(() => {
       const fetchdata = async () => {
           const response = await fetch(
-              'https://urban-craft-d3a6d-default-rtdb.firebaseio.com/ReadingTables.json'
+              'https://urban-craft-d3a6d-default-rtdb.firebaseio.com/BedSideTables.json'
           );
           const responseData = await response.json();
 
@@ -24,20 +24,20 @@ const ReadingTable = () => {
 
 
           };
-          setReadingTables(load);
+          setBedSideTables(load);
 
       }
       fetchdata();
   }, [])
 
 
-  const readingTableList = readingTable.map((readingTable) =>
+  const bedSideTableList = bedSideTables.map((bedSideTable) =>
       <Card
-          key={readingTable.id}
-          id={readingTable.id}
-          img={readingTable.img}
-          name = {readingTable.name}
-          price={readingTable.price}
+          key={bedSideTable.id}
+          id={bedSideTable.id}
+          img={bedSideTable.img}
+          name = {bedSideTable.name}
+          price={bedSideTable.price}
       />
 
 
@@ -49,17 +49,17 @@ const ReadingTable = () => {
           <div className='w-full flex justify-end items-center mt-5 mb-5'>
               <div className=' flex w-2/4 justify-between pr-5 items-center'>
                   <div>
-                      <h1 className='text-3xl font-semibold'>Reading Table</h1>
+                      <h1 className='text-3xl font-semibold'>Bed-Side-Table</h1>
                       <p className='font-extrabold text-gray-900 bg-zinc-950 w-14 h-1'></p>
                   </div>                 
-                  <p className='text-lg'>Showing {readingTableList.length} Products</p>
+                  <p className='text-lg'>Showing {bedSideTableList.length} Products</p>
               </div>
           </div>
           <ProductCardLayout >
-              {readingTableList}
+              {bedSideTableList}
           </ProductCardLayout>
       </div>
   )
 }
 
-export default ReadingTable
+export default BedSideTable

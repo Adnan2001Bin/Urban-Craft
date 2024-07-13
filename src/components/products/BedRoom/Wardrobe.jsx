@@ -1,9 +1,10 @@
 import React from 'react'
 import { useEffect, useState } from 'react'
-import Card from './Card'
+import Card from '../Card'
 import ProductCardLayout from '../ProductCardLayout'
 
-const Wardrobe = (props) => {
+
+const Wardrobe = () => {
     const [wardrobes, seWardrobes] = useState([])
 
     useEffect(() => {
@@ -62,5 +63,6 @@ const Wardrobe = (props) => {
         </div>
     )
 }
+
 
 export default Wardrobe
