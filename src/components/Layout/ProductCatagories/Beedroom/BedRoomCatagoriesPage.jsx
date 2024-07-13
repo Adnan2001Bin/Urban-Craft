@@ -66,7 +66,7 @@ const BedRoomCatagoriesPage = () => {
 
 
 
-                    <Link className='p-4 lg:w-64 w-44 lg:h-80 h-64 shadow-lg rounded-md overflow-hidden hover:border-2 hover:border-gray-300'>
+                    <Link to={'/DressingTable'} className='p-4 lg:w-64 w-44 lg:h-80 h-64 shadow-lg rounded-md overflow-hidden hover:border-2 hover:border-gray-300'>
                         <div className='w-full lg:h-60 h-44 overflow-hidden relative rounded-md '>
                             <img className='transition-transform duration-700 transform hover:scale-110 w-full h-full object-cover' src="assets\Bedroom\81QntSgAspL._SX679_.jpg" alt="" />
                         </div>
