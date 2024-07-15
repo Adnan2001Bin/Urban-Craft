@@ -23,16 +23,16 @@ const Card = (props) => {
 
   return (
    
-    <div className="p-4 lg:w-11/12 w-44 lg:h-full h-64 shadow-lg rounded-md overflow-hidden hover:border-2 hover:border-gray-300 ">
-      <div className="w-full lg:h-80 h-44 overflow-hidden relative rounded-md ">
+    <div className=" sm:p-4 lg:w-11/12 sm:w-72 w-40 h-full  shadow-lg rounded-md overflow-hidden hover:border-2 hover:border-gray-300 ">
+      <div className="w-full lg:h-80 h-48 overflow-hidden relative rounded-md ">
         <img
           className="transition-transform duration-700 transform hover:scale-110 w-full h-full object-cover"
           src={props.img}
           alt="Bedroom Set"
         />
       </div>
-      <div className="mb-5">
-        <h1 className="text-center text-xl text-slate-700 font-sans font-semibold">
+      <div className="sm:mb-5 mb-2">
+        <h1 className="text-center sm:text-xl text-base text-slate-700 font-sans font-semibold">
           {props.name}
         </h1>
         <p className="text-center  mt-1 font-mono font-bold">{price}</p>

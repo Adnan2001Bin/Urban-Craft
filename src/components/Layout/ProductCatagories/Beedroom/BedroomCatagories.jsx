@@ -26,24 +26,24 @@ const BedroomCatagories = () => {
 
 
 
-        <div className='shadow-md h-full bedItems cursor-pointer'>
+        <Link to={'/BedSideTable'} className='shadow-md h-full bedItems cursor-pointer'>
           <img className='w-24 h-24 mb-2' src="assets\Bedroom\Cosmos-110 .png" alt="" />
           <h1 className='text-xl font-bold'>BED SIDE TABLE</h1>
-        </div>
+        </Link>
 
 
-        <div className='shadow-md h-full bedItems cursor-pointer'>
+        <Link to={'/DressingTable'} className='shadow-md h-full bedItems cursor-pointer'>
           <img className='w-24 h-24 mb-2' src="assets\Bedroom\Crush-144.png" alt="" />
           <h1 className='text-xl font-bold'>DRESSING TABLE</h1>
-        </div>
+        </Link>
 
 
-        <div className='shadow-md h-full bedItems cursor-pointer'>
+        <Link to={'/Wardrobe'} className='shadow-md h-full bedItems cursor-pointer'>
           <img className='w-24 h-24 mb-2 ' src="assets\Bedroom\Bradshaw-141 .png" alt="" />
           <div className='text-xl font-bold'>
             <h1>WARDROBE</h1>
           </div>
-        </div>
+        </Link>
       </div>
     </div>
   )

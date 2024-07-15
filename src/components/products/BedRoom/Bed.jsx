@@ -45,14 +45,14 @@ const Bed = (props) => {
 
 
     return (
-        <div>
+        <div >
             <div className='w-full flex justify-end items-center mt-5 mb-5'>
                 <div className=' flex w-2/4 justify-between pr-5 items-center'>
                     <div>
                         <h1 className='text-3xl font-semibold'>Bed</h1>
                         <p className='font-extrabold text-gray-900 bg-zinc-950 w-14 h-1'></p>
                     </div>                 
-                    <p className='text-lg'>Showing {bedList.length} Products</p>
+                    <p className='hidden md:block md:text-lg'>Showing {bedList.length} Products</p>
                 </div>
             </div>
             <ProductCardLayout >

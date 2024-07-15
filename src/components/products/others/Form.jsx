@@ -21,8 +21,8 @@ function Form(props) {
   };
 
   return (
-    <form className="flex items-center justify-between space-x-2" onSubmit={submitHandler}>
-      <div className="flex items-center space-x-1 bg-slate-200">
+    <form className="lg:flex lg:items-center lg:justify-between lg:space-x-2 sm:pl-7 pl-2" onSubmit={submitHandler}>
+      <div className="flex lg:w-56 lg:h-8 items-center justify-center lg:space-x-2 bg-slate-200 sm:w-52 w-36">
         <button
           type="button"
           className="bg-gray-300 text-black rounded-l px-3 py-1"
@@ -59,7 +59,7 @@ function Form(props) {
           +
         </button>
       </div>
-      <button className="bg-black text-sm w-28 hover:bg-gray-700 rounded-3xl h-8 text-white">+ Add To Cart</button>
+      <button className="bg-black text-sm w-28 hover:bg-gray-700 rounded-3xl h-8 text-white sm:ml-11 ml-4 sm:mt-5 mt-3">+ Add To Cart</button>
       {!amountIsValid && <p className="bg-red-500 text-white p-1 rounded">Please enter a valid amount (1-5).</p>}
     </form>
   );

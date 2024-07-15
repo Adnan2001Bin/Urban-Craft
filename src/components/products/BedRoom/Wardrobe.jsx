@@ -54,7 +54,7 @@ const Wardrobe = () => {
                         <h1 className='text-3xl font-semibold'>Wardrobe</h1>
                         <p className='font-extrabold text-gray-900 bg-zinc-950 w-14 h-1'></p>
                     </div>                 
-                    <p className='text-lg'>Showing {wardrobeList.length} Products</p>
+                    <p className='hidden md:block md:text-lg'>Showing {wardrobeList.length} Products</p>
                 </div>
             </div>
             <ProductCardLayout >
